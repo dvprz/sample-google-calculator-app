@@ -1,0 +1,33 @@
+.key-button {
+    color: white;
+    height: auto;
+    font-weight: 300;
+    width: 100%;
+}
+
+:host .key-button {
+    background-color: #3c4043;
+    font-size: 40px;
+    line-height: 40px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    border-radius: 50%;
+}
+
+:host.key-operator .key-button,
+:host.key-delete-or-clear .key-button {
+    background-color: #5f6368;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 0;
+}
+
+:host.key-symbol .key-button {
+    font-size: 30px;
+    line-height: 30px;
+}
+
+:host.key-delete-or-clear .key-button {
+    font-size: 20px;
+    line-height: 20px;
+}

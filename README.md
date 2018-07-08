@@ -1,27 +1,30 @@
 # Calculator
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+Another exercise in recreating an app that already exists. This calculator is based
+off Google's android calculator app.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server.
 
-## Code scaffolding
+## Planning the structure
+I broke down how a user interacts with the calculator into inputs and actions; operators are also inputs.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Inputs
+* Digits (0 - 9)
+* Decimal (.)
+* Operators (/, x, -, +)
 
-## Build
+### Actions
+* Equals (=)
+* Delete (DEL/CLR)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Rules
+- Expressions can start with a decimal, digit, or minus
+- Decimal can follow anything
+- Times (x) can only follow a digit
+- Divide (/) can only follow a digit
+- Plus (\+) can only follow a digit
+- Minus (\-) can follow x, /, decimal, and digits
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+There are some features missing that are either way beyond my capabilities (not a scientific calculator) or would have been too time consuming like giving the display text input functionalities (ability to move your cursor, highlight, copy and paste, etc). Perhaps in a future version of it.
